@@ -1,9 +1,8 @@
 /*
  * JungBok Cho
- * CPSC 5003, Seattle University
- * This is free and unencumbered software released into the public domain.
+ * Triage System
  */
-package choj8_p2X;
+package triage;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -26,7 +25,7 @@ public class TriageSystem {
 		
 	// Constant for welcome message
 	private static final String MSG_WELCOME = "Welcome to Triage System!" 
-											   + "\nEnter help to display commands.";
+						  + "\nEnter help to display commands.";
 	
 	// Constant for goodbye message
 	private static final String MSG_GOODBYE = "\nThank you for using this " + "program!";
@@ -82,7 +81,7 @@ public class TriageSystem {
 	private static void processLine(String line, PatientPriorityQueue priQueue) throws IOException {
 		if (!line.isEmpty()) {
 			Scanner lineScanner = new Scanner(line);  // Scanner to extract words
-			String cmd = lineScanner.next(); 		  // The first is user's command
+			String cmd = lineScanner.next(); 	  // The first is user's command
 
 			// A switch statement could be used on strings, but not all have JDK7
 			if (cmd.equals("help")) {
@@ -227,7 +226,7 @@ public class TriageSystem {
 		String priorityWord = ""; // To change priority number to word
 		System.out.println("# patients waiting: " + priQueue.size() + "\n");
 		System.out.println("  Arrival #   Priority Code   Patient Name\n" 
-							+ "+-----------+---------------+--------------+");
+				    + "+-----------+---------------+--------------+");
 		ArrayList<Patient> temp = priQueue.getPatientList();
 
 		// Change priority codes to words
@@ -242,8 +241,8 @@ public class TriageSystem {
 				priorityWord = "minimal";
 			}
 			System.out.printf("     %-2d       %-10s      %-50s\n", 
-							  temp.get(i).getArrivalOrder(), priorityWord,
-							  temp.get(i).getName());
+					   temp.get(i).getArrivalOrder(), priorityWord,
+					   temp.get(i).getName());
 		}
 	}
 
@@ -258,7 +257,7 @@ public class TriageSystem {
 			System.out.println("There are no patients in the waiting area.");
 		} else {
 			System.out.println("This patient will now be seen: " 
-							   + priQueue.dequeue().getName());
+					   + priQueue.dequeue().getName());
 		}
 	}
 
@@ -311,7 +310,7 @@ public class TriageSystem {
 				}
 				if (printName) {
 					System.out.println("Added patient \"" + patientName 
-										+ "\" to the priority system");
+							    + "\" to the priority system");
 				}
 			// Error Message
 			} else {
