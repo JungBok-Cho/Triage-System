@@ -1,9 +1,8 @@
 /*
  * JungBok Cho
- * CPSC 5003, Seattle University
- * This is free and unencumbered software released into the public domain.
+ * Triage System
  */
-package choj8_p2X;
+package triage;
 
 /**
  * This is a program to create emergency waiting room patient representation.
@@ -66,14 +65,15 @@ public class Patient implements Comparable {
     
     /**
      * Override compareTo method
+     * To sort Patients based on their arrival orders
      */
-	@Override
-	public int compareTo(Object o) {
-		int compareage = ((Patient) o).getArrivalOrder();
-		
-        // For Ascending order
-        return this.arrivalOrder - compareage;
-	}
+     @Override
+     public int compareTo(Object o) {
+         int compareage = ((Patient) o).getArrivalOrder();
+
+	 // For Ascending order
+	 return this.arrivalOrder - compareage;
+     }
 
 	
     /**
