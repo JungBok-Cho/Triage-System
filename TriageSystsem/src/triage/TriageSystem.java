@@ -212,7 +212,7 @@ public class TriageSystem {
 			System.out.println("There are no patients in the waiting area.");
 		} else {
 			System.out.println("Highest priority patient to be called next: "
-							    + priQueue.peek().getName());
+					    + priQueue.peek().getName());
 		}
 	}
 	
@@ -379,7 +379,7 @@ public class TriageSystem {
 	 */
 	private static int getPatientToUpdate(String[] arr, ArrayList<Patient> temp) {
 		boolean stopLoop = true;  // To stop the loop
-		int arrivalOrder;		  // Arrival order
+		int arrivalOrder;   	  // Arrival order
 		int targetPatient = -1;   // index of the target patient
 
 		// Check error
