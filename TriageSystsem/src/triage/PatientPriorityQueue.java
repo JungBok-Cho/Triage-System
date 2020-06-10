@@ -1,9 +1,8 @@
 /*
  * JungBok Cho
- * CPSC 5003, Seattle University
- * This is free and unencumbered software released into the public domain.
+ * Triage System
  */
-package choj8_p2X;
+package triage;
 import java.util.ArrayList;
 
 /**
@@ -14,8 +13,8 @@ import java.util.ArrayList;
  */
 public class PatientPriorityQueue {
 	
-	private ArrayList<Patient> patients;  // heap property is always satisfied
-	private int nextPatientNumber; 		  // num assigned to next added patient
+	private ArrayList<Patient> patients;   // heap property is always satisfied
+	private int nextPatientNumber; 	       // num assigned to next added patient
 
 	
 	/**
@@ -82,8 +81,8 @@ public class PatientPriorityQueue {
 	/**
 	 * Remove an item from the heap
 	 * 
-	 * @return Return the minimum element in the heap Return null if the heap is
-	 *         empty
+	 * @return Return the minimum element in the heap 
+	 *         Return null if the heap is empty
 	 */
 	public Patient dequeue() {
 		if (patients.isEmpty()) {
