@@ -190,11 +190,11 @@ public class PatientPriorityQueue {
 
 			// Check which priority is lower
 			if (hasLeft(index) && patients.get(minIndex).getPriorityCode() 
-								   > left(index).getPriorityCode()) {
+					       > left(index).getPriorityCode()) {
 				minIndex = index * 2 + 1;
 			// If the priorities are same, check the arrival orders
 			} else if (hasLeft(index) && patients.get(minIndex).getPriorityCode() 
-									     == left(index).getPriorityCode()) {
+						      == left(index).getPriorityCode()) {
 				if (patients.get(minIndex).getArrivalOrder() > left(index).getArrivalOrder()) {
 					minIndex = index * 2 + 1;
 				}
@@ -202,11 +202,11 @@ public class PatientPriorityQueue {
 			
 			// Check which priority is lower
 			if (hasRight(index) && patients.get(minIndex).getPriorityCode() 
-								    > right(index).getPriorityCode()) {
+					        > right(index).getPriorityCode()) {
 				minIndex = index * 2 + 2;
 			// If the priorities are same, check the arrival orders
 			} else if (hasRight(index) && patients.get(minIndex).getPriorityCode() 
-									      == right(index).getPriorityCode()) {
+						       == right(index).getPriorityCode()) {
 				if (patients.get(minIndex).getArrivalOrder() > right(index).getArrivalOrder()) {
 					minIndex = index * 2 + 2;
 				}
